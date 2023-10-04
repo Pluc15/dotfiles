@@ -1,6 +1,0 @@
-rofi.kb-cancel: Escape,Super_L
-rofi.show-icons: true
-rofi.font: Fira Code 10
-rofi.matching: fuzzy
-rofi.sort: true
-rofi.sorting-method: fzf
