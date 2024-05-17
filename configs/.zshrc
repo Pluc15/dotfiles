@@ -41,9 +41,7 @@ export PATH="$PATH:$HOME/.bun/bin"
 
 
 # Prompt
-export PS1="${CL_WHITE}[${CL_LGRAY}\t${CL_WHITE}] ${CL_MAGENTA}\u ${CL_BLUE}\w\n${CL_LGRAY}>${CL_RESET} "
+export PROMPT="%F{white}[%*]%f %F{magenta}%n%f%F %F{blue}%~%f"$'\n'"> "
 
 # Terminal tools
-[ -s "$HOME/.fzf.bash" ] && source ~/.fzf.bash
-source /usr/share/fzf/key-bindings.bash
-source /usr/share/fzf/completion.bash
+[ -s "$HOME/.fzf.zsh" ] && source ~/.fzf.zsh

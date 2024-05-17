@@ -1,0 +1,2 @@
+#!/bin/sh
+git diff $(git merge-base origin/develop HEAD) | fzf
