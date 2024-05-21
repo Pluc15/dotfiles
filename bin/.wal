@@ -1,5 +1,4 @@
 #!/bin/sh
-
 convert "$1" "$HOME/.config/wallpaper.png"
 nitrogen --head=0 --set-zoom-fill --save "$HOME/.config/wallpaper.png"
 # TODO Find a smarter way to test for multi monitor

@@ -1,1 +1,2 @@
-ls --color=auto -l
+#!/bin/sh
+ls --color=auto -l $@

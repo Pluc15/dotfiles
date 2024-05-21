@@ -1,5 +1,0 @@
-#!/bin/sh
-pushd $DOTFILES
-ggpl
-popd
-sh $DOTFILES/install.sh
