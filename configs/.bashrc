@@ -1,6 +1,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Figure out the full path of the dotfiles
+export DOTFILES=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+export DOTFILES=$(dirname "$DOTFILES")
+
 # Add default arguments
 alias ls='ls --color=auto'
 
