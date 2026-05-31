@@ -11,6 +11,22 @@ echoStep() {
     echo -e "== $1 =="
 }
 
+installYay() {
+    echoStep "Installing yay"
+    
+    mkdir -p "$HOME/.aur"
+    pushd "$HOME/.aur"
+    if [ ! -d "yay" ]
+    then
+        git clone https://aur.archlinux.org/yay.git
+    fi
+    cd yay
+    # Shouldnt need this and it may slow down upgrades: git reset --hard
+    git pull
+    makepkg -si --needed
+    popd
+}
+
 installShellStartup() {
     echoStep "Installing dotfiles in shells startups"
 
@@ -27,21 +43,12 @@ installShellStartup() {
     grep "$ZSHRC_SOURCE" "$ZSHRC_FILE" || echo $ZSHRC_SOURCE | tee -a $ZSHRC_FILE
 }
 
-installBrew() {
-    echoStep "Installing Homebrew"
-    
-    brew --version | grep -q "Homebrew" || bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    # TODO Do I need to source something so it works in this session?
-    brew update
-}
-
-installPackages() {
-    echoStep "Installing packages"
-
-    brew install fzf
+configureGit() {
+    git config --global user.name "Pier-Luc"
+    git config --global user.email "pluc.m@outlook.com"
+    git config --global core.editor "code --wait"
+    git config --global merge.tool vscode
+    git config --global mergetool.vscode.cmd "code --wait --merge \$REMOTE \$LOCAL \$BASE \$MERGED"
 }
 
 installShellStartup
-installBrew
-installPackages
-echoStep "Done!"

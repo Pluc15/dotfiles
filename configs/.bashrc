@@ -42,6 +42,7 @@ export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="$PATH:$HOME/.dotnet"
 export PATH="$PATH:$HOME/.bun/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Prompt
 export PS1="${CL_WHITE}[${CL_LGRAY}\t${CL_WHITE}] ${CL_MAGENTA}\u ${CL_BLUE}\w\n${CL_LGRAY}>${CL_RESET} "
