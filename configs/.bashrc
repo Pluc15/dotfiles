@@ -31,13 +31,7 @@ CL_LCYAN='\[\e[01;36m\]'
 CL_WHITE='\[\e[01;37m\]'
 
 # Init dev tools
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 [ -s "$HOME/.nvm/nvm.sh" ] && source "$HOME/.nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && source "/opt/homebrew/opt/nvm/nvm.sh" # If on Mac
-[ -s "$HOME/.yvm/yvm.sh" ] && source "$HOME/.yvm/yvm.sh"
-[ -s "/opt/homebrew/opt/yvm/yvm.sh" ] && source "/opt/homebrew/opt/yvm/yvm.sh" # If on Mac
-[ -s "/opt/homebrew/bin/brew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
-command -v limactl >/dev/null 2>&1 && export DOCKER_HOST=$(limactl list docker --format 'unix://{{.Dir}}/sock/docker.sock')
 
 # Path
 export PATH="$PATH:$DOTFILES/bin"
