@@ -9,23 +9,23 @@ export DOTFILES=$(dirname "$DOTFILES")
 alias ls='ls --color=auto'
 
 # Variables
-export CL_RESET=$(echo -en '\033[0m')
-export CL_RED=$(echo -en '\033[00;31m')
-export CL_GREEN=$(echo -en '\033[00;32m')
-export CL_YELLOW=$(echo -en '\033[00;33m')
-export CL_BLUE=$(echo -en '\033[00;34m')
-export CL_MAGENTA=$(echo -en '\033[00;35m')
-export CL_PURPLE=$(echo -en '\033[00;35m')
-export CL_CYAN=$(echo -en '\033[00;36m')
-export CL_LGRAY=$(echo -en '\033[00;37m')
-export CL_LRED=$(echo -en '\033[01;31m')
-export CL_LGREEN=$(echo -en '\033[01;32m')
-export CL_LYELLOW=$(echo -en '\033[01;33m')
-export CL_LBLUE=$(echo -en '\033[01;34m')
-export CL_LMAGENTA=$(echo -en '\033[01;35m')
-export CL_LPURPLE=$(echo -en '\033[01;35m')
-export CL_LCYAN=$(echo -en '\033[01;36m')
-export CL_WHITE=$(echo -en '\033[01;37m')
+CL_RESET='\[\e[0m\]'
+CL_RED='\[\e[00;31m\]'
+CL_GREEN='\[\e[00;32m\]'
+CL_YELLOW='\[\e[00;33m\]'
+CL_BLUE='\[\e[00;34m\]'
+CL_MAGENTA='\[\e[00;35m\]'
+CL_PURPLE='\[\e[00;35m\]'
+CL_CYAN='\[\e[00;36m\]'
+CL_LGRAY='\[\e[00;37m\]'
+CL_LRED='\[\e[01;31m\]'
+CL_LGREEN='\[\e[01;32m\]'
+CL_LYELLOW='\[\e[01;33m\]'
+CL_LBLUE='\[\e[01;34m\]'
+CL_LMAGENTA='\[\e[01;35m\]'
+CL_LPURPLE='\[\e[01;35m\]'
+CL_LCYAN='\[\e[01;36m\]'
+CL_WHITE='\[\e[01;37m\]'
 
 # Init dev tools
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
