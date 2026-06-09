@@ -8,6 +8,9 @@ export DOTFILES=$(dirname "$DOTFILES")
 # Add default arguments
 alias ls='ls --color=auto'
 
+# Hotkeys
+bind '"\C-h": backward-kill-word'
+
 # Variables
 CL_RESET='\[\e[0m\]'
 CL_RED='\[\e[00;31m\]'
